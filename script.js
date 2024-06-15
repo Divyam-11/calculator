@@ -16,7 +16,12 @@ else if(btn.innerText == "AC"){
 screen_text.innerText = "";
 }
 else if(btn.innerText == "="){
-    screen_text.innerText = eval(screen_text.innerText);
+    try {
+        screen_text.innerText = eval(screen_text.innerText);
+    } catch (error) {
+        screen_text.innerText = "Error..";
+    }
+    
 }
 else {
     str = screen_text.innerText;
